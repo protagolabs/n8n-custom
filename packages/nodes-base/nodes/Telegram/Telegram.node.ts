@@ -1531,7 +1531,8 @@ export class Telegram implements INodeType {
 					{
 						...appendAttributionOption,
 						description:
-							'Whether to include the phrase “This message was sent automatically with n8n” to the end of the message',
+							// 'Whether to include the phrase “This message was sent automatically with n8n” to the end of the message',
+							'Whether to include the phrase “This message was sent automatically with xyz to the end of the message',
 						displayOptions: {
 							show: {
 								'/operation': ['sendMessage'],

@@ -309,14 +309,15 @@ export function createSendAndWaitMessageBody(context: IExecuteFunctions) {
 	};
 
 	if (config.appendAttribution) {
-		const instanceId = context.getInstanceId();
-		const attributionText = 'This message was sent automatically with ';
-		const link = createUtmCampaignLink('n8n-nodes-base.slack', instanceId);
+		// const instanceId = context.getInstanceId();
+		// const attributionText = 'This message was sent automatically with ';
+		// const link = createUtmCampaignLink('n8n-nodes-base.slack', instanceId);
 		body.blocks.push({
 			type: 'section',
 			text: {
 				type: 'mrkdwn',
-				text: `${attributionText} _<${link}|n8n>_`,
+				// text: `${attributionText} _<${link}|n8n>_`,
+				text: ``,
 			},
 		});
 	}

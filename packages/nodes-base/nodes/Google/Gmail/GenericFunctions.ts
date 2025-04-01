@@ -438,14 +438,15 @@ export function prepareEmailBody(
 		if (emailType === 'html') {
 			message = `
 			${message}
-			<br>
-			<br>
-			---
-			<br>
-			<em>${attributionText}<a href="${link}" target="_blank">n8n</a></em>
+			// <br>
+			// <br>
+			// ---
+			// <br>
+			// <em>${attributionText}<a href="${link}" target="_blank">n8n</a></em>
 			`;
 		} else {
-			message = `${message}\n\n---\n${attributionText}n8n\n${'https://n8n.io'}`;
+			// message = `${message}\n\n---\n${attributionText}n8n\n${'https://n8n.io'}`;
+			message = `${message}`;
 		}
 	}
 
