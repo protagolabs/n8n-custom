@@ -394,10 +394,11 @@ export function createSendAndWaitMessageBody(context: IExecuteFunctions) {
 	const config = getSendAndWaitConfig(context);
 	let description = config.message;
 	if (config.appendAttribution !== false) {
-		const instanceId = context.getInstanceId();
-		const attributionText = 'This message was sent automatically with ';
-		const link = createUtmCampaignLink('n8n-nodes-base.discord', instanceId);
-		description = `${config.message}\n\n_${attributionText}_[n8n](${link})`;
+		// const instanceId = context.getInstanceId();
+		// const attributionText = 'This message was sent automatically with ';
+		// const link = createUtmCampaignLink('n8n-nodes-base.discord', instanceId);
+		// description = `${config.message}\n\n_${attributionText}_[n8n](${link})`;
+		description = `${config.message}`;
 	}
 
 	const body = {

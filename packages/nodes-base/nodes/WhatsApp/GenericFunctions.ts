@@ -118,9 +118,10 @@ export const createMessage = (
 
 	let n8nAttribution: string = '';
 	if (sendAndWaitConfig.appendAttribution) {
-		const attributionText = 'This message was sent automatically with ';
-		const link = createUtmCampaignLink('n8n-nodes-base.whatsapp', instanceId);
-		n8nAttribution = `\n\n${attributionText}${link}`;
+		// const attributionText = 'This message was sent automatically with ';
+		// const link = createUtmCampaignLink('n8n-nodes-base.whatsapp', instanceId);
+		// n8nAttribution = `\n\n${attributionText}${link}`;
+		n8nAttribution = `\n\n`;
 	}
 
 	return {

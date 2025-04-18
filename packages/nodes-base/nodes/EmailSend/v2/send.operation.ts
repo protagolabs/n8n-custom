@@ -119,7 +119,8 @@ const properties: INodeProperties[] = [
 			{
 				...appendAttributionOption,
 				description:
-					'Whether to include the phrase “This email was sent automatically with n8n” to the end of the email',
+					// 'Whether to include the phrase “This email was sent automatically with n8n” to the end of the email',
+					'Whether to include the phrase “This email was sent automatically with xyz to the end of the email',
 			},
 			{
 				displayName: 'Attachments',
@@ -220,16 +221,21 @@ export async function execute(this: IExecuteFunctions): Promise<INodeExecutionDa
 				const attributionText = 'This email was sent automatically with ';
 				const link = createUtmCampaignLink('n8n-nodes-base.emailSend', instanceId);
 				if (emailFormat === 'html' || (emailFormat === 'both' && mailOptions.html)) {
+					// mailOptions.html = `
+					// ${mailOptions.html}
+					// <br>
+					// <br>
+					// ---
+					// <br>
+					// <em>${attributionText}<a href="${link}" target="_blank">n8n</a></em>
+					// `;
 					mailOptions.html = `
 					${mailOptions.html}
 					<br>
-					<br>
-					---
-					<br>
-					<em>${attributionText}<a href="${link}" target="_blank">n8n</a></em>
 					`;
 				} else {
-					mailOptions.text = `${mailOptions.text}\n\n---\n${attributionText}n8n\n${'https://n8n.io'}`;
+					// mailOptions.text = `${mailOptions.text}\n\n---\n${attributionText}n8n\n${'https://n8n.io'}`;
+					mailOptions.text = `${mailOptions.text}`;
 				}
 			}
 

@@ -66,7 +66,8 @@ describe('Test Telegram, message => sendAndWait', () => {
 					[{ text: 'Approve', url: 'http://localhost/waiting-webhook/nodeID?approved=true' }],
 				],
 			},
-			text: 'my message\n\n_This message was sent automatically with _[n8n](https://n8n.io/?utm_source=n8n-internal&utm_medium=powered_by&utm_campaign=n8n-nodes-base.telegram_instanceId)',
+			// text: 'my message\n\n_This message was sent automatically with _[n8n](https://n8n.io/?utm_source=n8n-internal&utm_medium=powered_by&utm_campaign=n8n-nodes-base.telegram_instanceId)',
+			text: 'my message',
 		});
 	});
 });
